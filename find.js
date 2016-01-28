@@ -15,5 +15,11 @@ function findContact(c, id)
 };
 
 var contacts = [{ Id: 0, Name: "Warren", Age: 53}, {Id: 1, Name: "Lynn", Age: 55 }, {Id: 2, Name: "Beth, Age: 52" }];
-var contact = findContact(contacts,1);
-console.log('Name: ' + contact.Name);
+var contact = findContact(contacts,4);
+if (contact !== null) {
+  console.log('Name: ' + contact.Name);
+}
+else {
+	console.log('Not found.');
+}
+	
