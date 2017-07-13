@@ -25,6 +25,17 @@ myLib.prototype.getVersion = function() {
 	return this.version;
 }
 
+myLib.prototype.functionOne = function() {
+	console.log('functionOne called.');
+	this.functionTwo();
+	return this;
+}
+
+myLib.prototype.functionTwo = function() {
+	console.log('functionTwo called.');
+	return this;
+}
+
 //Create the libary object
 var lib = new myLib('test library');
 //var lib = new myLib();
@@ -45,3 +56,7 @@ console.log('');
 console.log('Setting new library version: ' + newVersion);
 libVersion = lib.setVersion(newVersion).getVersion();
 console.log('Library version: ' + libVersion);
+
+//Test method calling another method
+console.log('');
+lib.functionOne();

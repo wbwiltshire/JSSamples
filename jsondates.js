@@ -15,9 +15,12 @@ console.log('Birth date serialized to JSON: ' + birthdateStr);
 //However, some dates are serialized as milliseconds since Jan. 1, 1970 and stored in a JSON variable 
 console.log();
 console.log('Dates in milliseconds since epoch:');
+var millisecondsDate = new Date('2099-12-31T00:00:00.000Z').getTime();
+console.log('2099-12-31T00:00:00.000Z in milliseconds: ' + millisecondsDate);
 var dates = { startDate: 1471716000 , endDate: 1471719600 };
 
 //convert integer dates from seconds to milliseconds
+var millisecondsDate = new Date('2099-12-31T00:00:00.000Z').getTime();
 converted.startDate = new Date(dates.startDate * 1000);
 converted.endDate = new Date(dates.endDate * 1000);
 console.log();

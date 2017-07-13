@@ -1,6 +1,6 @@
 //An example of a closure
 //This is a functino that calls itself, but allows the developer
-//keep all the varialbes and functions local to it
+//keep all the variables and functions local to it
 var test = 'World';
 
 (function() {
