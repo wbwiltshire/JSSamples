@@ -43,3 +43,32 @@ lastNames.forEach( function(arr) {
 	console.log(firstNames[idx] + ' ' + arr);
 	idx++;
 });
+
+console.log ();  
+console.log ('Searching....');  
+var searchArray = ['First','Second','Third'];
+var targetName = 'Second';
+var result = '';
+searchArray.forEach(function(arr) {
+	console.log(arr);
+	if (arr === targetName)
+		result = arr;
+});
+console.log('Found: ', result);
+
+console.log();
+console.log('Adding elements');
+var list = [];
+var element = new Object()
+element.Name = "Tim";
+element.Age = 10;
+list.push(element);
+element = new Object()
+element.Name = "Bob";
+element.Age = 20;
+list.push(element);
+list.forEach( function(arr) {
+	console.log('Name:' + arr.Name + ', Age: ' + arr.Age);
+});
+
+
