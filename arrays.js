@@ -44,6 +44,7 @@ lastNames.forEach( function(arr) {
 	idx++;
 });
 
+// Searching arrays
 console.log ();  
 console.log ('Searching....');  
 var searchArray = ['First','Second','Third'];
@@ -55,6 +56,10 @@ searchArray.forEach(function(arr) {
 		result = arr;
 });
 console.log('Found: ', result);
+
+console.log('Found: ', searchArray.find((str) => str == targetName));
+
+// Adding elements
 
 console.log();
 console.log('Adding elements');
@@ -70,5 +75,21 @@ list.push(element);
 list.forEach( function(arr) {
 	console.log('Name:' + arr.Name + ', Age: ' + arr.Age);
 });
+
+// Upsert
+console.log();
+console.log('Upsert');
+list = ["red", "orange", "green" ];
+console.log("list: ", list);
+function upsert(array, element) { // (1)
+  const i = array.findIndex(_element => _element === element);
+  if (i > -1) array[i] = element; // (2)
+  else array.push(element);
+}
+
+upsert(list, "blue");
+console.log("list: ", list);
+upsert(list, "orange");
+console.log("list: ", list);
 
 
